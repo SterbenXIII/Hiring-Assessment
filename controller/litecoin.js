@@ -60,7 +60,7 @@ const confirm = async (req, res) => {
     const { data } = await axios.get(`${apiEndpoint}/addrs/${sender}/full`, {
       params: { token: process.env.BLOCKCYPHER_KEY },
     });
-    
+
     console.log(data);
     return res.send( data );
   } catch (error) {

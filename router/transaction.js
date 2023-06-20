@@ -9,5 +9,6 @@ module.exports = (router) => {
   router.get("/transaction/deposit", TransactionController.getDepositTransaction);
 
   router.post("/transaction/", authMiddleware.auth, TransactionController.makeTransaction);
+  router.post("/transaction/sign", TransactionController.signTx);
 }
 
